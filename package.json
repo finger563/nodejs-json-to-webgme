@@ -1,0 +1,27 @@
+{
+  "name": "json-to-webgme",
+  "version": "1.0.0",
+  "description": "Allows creation of webgme objects as a subtree of a project from an exported json of another project with the same meta.",
+  "main": "modelImporter.js",
+  "scripts": {
+    "test": "importModel(core, metaPaths, META, modelJSON, rootNode)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://finger563@github.com/finger563/nodejs-json-to-webgme.git"
+  },
+  "keywords": [
+    "webgme",
+    "json",
+    "import"
+  ],
+  "author": "William Emfinger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/finger563/nodejs-json-to-webgme/issues"
+  },
+  "homepage": "https://github.com/finger563/nodejs-json-to-webgme#readme",
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}
