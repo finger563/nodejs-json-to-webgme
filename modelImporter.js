@@ -11,8 +11,8 @@ define(['q'], function(Q) {
 	    self.core = core;
 	    
 	    self.META = META;
-	    self.metaPaths = Object.keys(self.META).map(function(node) {
-		return core.getPath(node);
+	    self.metaPaths = Object.keys(self.META).map(function(mk) {
+		return core.getPath(self.META[mk]);
 	    });
 	    self.model = model;
 	    self.rootNode = rootNode;
