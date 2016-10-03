@@ -72,11 +72,18 @@ define(['q'], function(Q) {
 	        var parentNode = self.createdObjects[object.parentPath];
                 // don't want to create the same object multiple times
 	        if (self.createdObjects[objectPath] == undefined) {
-		    if (self.createdObjects[object.parentPath] == undefined) {
-		        // create parent
-		        parentNode = self.createObject(object.parentPath);
+		    if (object.parentPath) {
+			if (self.createdObjects[object.parentPath] == undefined) {
+		            // create parent
+		            parentNode = self.createObject(object.parentPath);
+			}
+		    }
+		    else {
+                        parentNode = self.rootNode;
+                        self.createdObjects[object.parentPath] = parentNode;
 		    }
                     if (parentNode == null) {
+			self.notify('warning', object.name + " doesn't have valid parent, creating under current model node.");
                         parentNode = self.rootNode;
                         self.createdObjects[object.parentPath] = parentNode;
                     }
