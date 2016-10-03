@@ -1,6 +1,6 @@
 {
   "name": "json-to-webgme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows creation of webgme objects as a subtree of a project from an exported json of another project with the same meta.",
   "main": "modelImporter.js",
   "scripts": {
