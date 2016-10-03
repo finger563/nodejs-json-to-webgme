@@ -5,13 +5,15 @@ define(['q'], function(Q) {
     return {
 	// create all model nodes and their attributes
 	// update all pointers and sets
-	importModel: function(core, metaPaths, META, model, rootNode) {
+	importModel: function(core, META, model, rootNode) {
 	    var self = this;
 
 	    self.core = core;
 	    
 	    self.META = META;
-	    self.metaPaths = metaPaths;
+	    self.metaPaths = Object.keys(self.META).map(function(node) {
+		return core.getPath(node);
+	    });
 	    self.model = model;
 	    self.rootNode = rootNode;
 
